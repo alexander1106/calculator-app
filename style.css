@@ -1,0 +1,336 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #C5E4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    width: 50%;
+    height: 70vh;
+}
+
+.contenedor_logo{
+    text-align: center;
+    margin-bottom: 10vh;
+    margin-bottom: 22px;
+}
+
+.contenedor_logo img{
+    width: 5vw;
+}
+
+
+.contenedor_general{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    height: 56vh;
+    display: flex;
+}
+
+
+.contenedor_uno, .contenedor_dos{
+    width: 50%;
+    height: 300px;
+    margin: 2% 2% 2% 0%;
+    background-color:#00474B;
+    border-radius: 15px;
+}
+.borrar{
+    text-align: center;
+    width: 100%;
+}
+
+.contenedor_uno{
+    padding:3%;
+    margin-left: 2%;
+    background-color: rgb(255, 255, 255);
+}
+
+h3{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 8px ;
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 0.9px;
+
+}
+
+
+.contenedor_uno_bill_input{
+    margin-top: 9px;
+    border-radius: 7px;
+    height: 34px;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid rgb(240, 240, 240);
+    padding-top: 6px;
+    padding-left: 10px;
+    position: relative;
+}
+.contenedor_uno_bill_input:hover{
+    border: 2px solid rgb(70, 224, 212);
+}
+
+.contenedor_uno_bill_input input{
+    border: 0px;
+    height: 20px;
+    text-align: right;
+    font-size: 18px;
+    border: 0px;
+    background-color: rgb(240, 240, 240);
+    width: 89%;
+    font-family: "https://fonts.google.com/specimen/Space+Mono";
+    color:  #00474B;
+    font-weight: 900;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+
+input:focus {
+    outline: none;
+}
+
+.contenedor_textos{
+    display:flex;
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+.contenedor_textos .mensajeError {
+    text-align: right;
+    width: 60%;
+    float: right;
+    color: red ;
+    display: none;
+}
+
+
+.btns{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contenedor_btns{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 45px 45px;
+}
+.contenedor_btns button, .contenedor_btns input{
+    font-family: "EB Garamond" ;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 0px;
+    background-color: #00474B;
+    color: white;
+    margin-right: 9px;
+    margin-top: 4px;
+    cursor:pointer; 
+    margin-bottom: 8px;
+}
+.contenedor_btns input{
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(240, 240, 240);
+}
+.contenedor_btns input:hover{
+    border: 2px solid rgb(42, 209, 187);
+    border-radius: 7px;
+}
+.contenedor_btns button:hover{
+    background-color: #9DE9DF;
+    font-weight: 700;
+}
+
+
+
+
+.primer_rect, .segundo_rect{
+    color: #fafafa;
+    margin: 45px 25px 0px 30px;
+    display:flex ;   
+    overflow: hidden;
+
+}
+.texto h2, .texto h2{
+    font-size: 13px;    font-family: "EB Garamond"; 
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+}
+.texto{
+    width: 100px;
+}
+.texto h1{
+    color: rgb(177, 177, 177);
+    margin-top: 2px;
+    font-size: 10px;
+}
+.segundo_rect{
+    margin-bottom: 9vh;
+}
+.reset{
+    width: 85%;
+    border:0px;
+    border-radius: 8px;
+    height: 6vh;
+    background-color: #9FE8DF;
+    color:#003D3A;
+    font-weight: 750;
+    cursor: pointer;
+    font-weight: 600;
+}
+.resultado_uno,.resultado_dos{  
+    width: 140px;  
+    margin-left: 4%;
+    color:#9c9696;
+    border: 0px;
+    text-align: right;
+    padding-right: 5px;
+    margin-right: 5px;
+    font-size: 35px;
+    color: rgb(22, 155, 144);
+    font-weight:700;
+    font-family: "https://fonts.google.com/specimen/Space+Mono";
+}
+.resultado_uno::placeholder, .resultado_dos::placeholder{
+    color: #21C2A8;
+}
+.aviso2{
+    position: absolute;
+    color: rgb(17, 17, 17);
+    display: none;
+    background-color: white;
+    width: 24vw;
+    height: 20vh;
+    border: 2px solid rgb(163, 53, 25);
+    box-shadow: 2px 2px 10px 2px wheat;
+    border-radius: 10px ;
+}
+.contenedor-aviso2{
+    width: 20vw;
+    height: 14vh;
+    margin: auto;
+    margin-top: 19px;
+    text-align: center;
+}
+.contenedor-aviso2 h2{
+    margin-bottom: 3px;
+}
+.aviso{
+    width: 23vw;
+    position: absolute;
+    padding: 9px;
+    border: solid 1px black;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px 2px;
+    display: none;
+}
+
+.ok2{
+    width: 80px;
+    height: 40px;
+    background-color: #4be1e9;
+    border: 0px;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 9px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.x{
+    position: absolute;
+    margin-top: 30%;
+    color: red;
+    margin-left: 40%;
+    font-size:38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.aviso h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-aviso{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width: 375px) {
+    body{
+        display: block;
+    }
+    main{
+        width: 100%;
+    }
+    .contenedor_logo{
+        margin-top: 40px;
+    }
+    .contenedor_logo img{
+        width:20vw;
+    }
+    .contenedor_general{
+        display: block;
+        border-radius: 30px;
+        overflow: hidden;
+        height: 100vh;
+    }
+    .primer_rect{
+        width: 80%;
+    }
+    .contenedor_uno{
+        width: 90%;
+        margin: 14px 14px 0px;
+      }
+    .contenedor_btns button{
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .contenedor_btns{
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 50px 50px 50px;
+    }
+    .contenedor_dos{
+        width: 90%;
+        margin: auto;
+    }
+    .primer_rect{
+        margin-top: 14px;
+        padding-top:20px;
+    }
+    .segundo_rect{
+        margin-top: 20px;
+    }
+
+    .borrar{
+        margin-top: -30px;
+    }
+    .contenedor_dos{
+        height: 190px;
+        margin-top: 50px;
+        overflow: hidden;
+        
+    }
+    .resultado_uno, .resultado_dos{
+        font-size: 30px;
+        margin-top:-3px ;
+    }
+
+}
