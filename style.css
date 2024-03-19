@@ -12,9 +12,10 @@ body{
     height: 100vh;
 }
 
-main{
+.main{
     width: 50%;
-    height: 70vh;
+    padding: 1%;
+    height: 70%;
 }
 
 .contenedor_logo{
@@ -27,31 +28,32 @@ main{
     width: 5vw;
 }
 
-
 .contenedor_general{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    height: 56vh;
+    height: 79%;
     display: flex;
 }
 
 
 .contenedor_uno, .contenedor_dos{
-    width: 50%;
-    height: 300px;
+    width: 46%;
+    height: 90%;
     margin: 2% 2% 2% 0%;
     background-color:#00474B;
     border-radius: 15px;
 }
 .borrar{
+    margin-top: 23%;
     text-align: center;
     width: 100%;
 }
 
 .contenedor_uno{
     padding:3%;
+    padding-top: 1px;
     margin-left: 2%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 h3{
@@ -60,35 +62,40 @@ h3{
     margin-bottom: 8px ;
     font-family: 'EB Garamond', serif;
     letter-spacing: 0.9px;
+    margin-top: 10px;
 
 }
-
 
 .contenedor_uno_bill_input{
     margin-top: 9px;
     border-radius: 7px;
-    height: 34px;
-    background-color: rgb(240, 240, 240);
+    height: 39px;
     border: 2px solid rgb(240, 240, 240);
-    padding-top: 6px;
+    background-color: rgb(240, 240, 240);
     padding-left: 10px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.contenedor_uno_bill_input:hover{
-    border: 2px solid rgb(70, 224, 212);
+svg{
+    transform: scale(1.3);
+    margin-right: 9px;
 }
-
+    
 .contenedor_uno_bill_input input{
-    border: 0px;
-    height: 20px;
+    height: 23px;
     text-align: right;
     font-size: 18px;
     border: 0px;
     background-color: rgb(240, 240, 240);
-    width: 89%;
+    width: 90%;
+    padding-right: 8px;
     font-family: "https://fonts.google.com/specimen/Space+Mono";
     color:  #00474B;
     font-weight: 900;
+}
+.contenedor_uno_bill_input:hover{
+    border: 2px solid rgb(70, 224, 212);
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -105,7 +112,6 @@ input:focus {
     display:flex;
     position: relative;
     width: 100%;
-    height: 20px;
 }
 .contenedor_textos .mensajeError {
     text-align: right;
@@ -115,11 +121,6 @@ input:focus {
     display: none;
 }
 
-
-.btns{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 .contenedor_btns{
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -134,9 +135,8 @@ input:focus {
     background-color: #00474B;
     color: white;
     margin-right: 9px;
-    margin-top: 4px;
+    margin-top: 8px;
     cursor:pointer; 
-    margin-bottom: 8px;
 }
 .contenedor_btns input{
     text-align: center;
@@ -150,21 +150,19 @@ input:focus {
 }
 .contenedor_btns button:hover{
     background-color: #9DE9DF;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 
-
-
-.primer_rect, .segundo_rect{
+.rect{
+    display:flex;
     color: #fafafa;
-    margin: 45px 25px 0px 30px;
-    display:flex ;   
-    overflow: hidden;
+    margin: 14% 9%;
 
 }
 .texto h2, .texto h2{
-    font-size: 13px;    font-family: "EB Garamond"; 
+    font-size: 13px;    
+    font-family: "EB Garamond"; 
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
 }
@@ -176,9 +174,7 @@ input:focus {
     margin-top: 2px;
     font-size: 10px;
 }
-.segundo_rect{
-    margin-bottom: 9vh;
-}
+
 .reset{
     width: 85%;
     border:0px;
@@ -227,16 +223,6 @@ input:focus {
 .contenedor-aviso2 h2{
     margin-bottom: 3px;
 }
-.aviso{
-    width: 23vw;
-    position: absolute;
-    padding: 9px;
-    border: solid 1px black;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 2px 2px 9px 2px;
-    display: none;
-}
 
 .ok2{
     width: 80px;
@@ -250,87 +236,84 @@ input:focus {
     cursor: pointer;
 }
 
-.x{
-    position: absolute;
-    margin-top: 30%;
-    color: red;
-    margin-left: 40%;
-    font-size:38px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.aviso h2{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    margin-bottom: 2px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.contenedor-aviso{
-    width: 80%;
-    text-align: center;
-    margin: auto;
-}
 
 
 
 @media screen and (max-width: 475px) {
-    body{
-        display: block;
-    }
-    main{
+    .main{
         width: 100%;
-    }
-    .contenedor_logo{
-        margin-top: 40px;
+
     }
     .contenedor_logo img{
-        width:20vw;
+        width: 25%;
+        margin-bottom: 10px;
     }
+
     .contenedor_general{
         display: block;
-        border-radius: 30px;
-        overflow: hidden;
-        height: 100vh;
+        background-color: #ffffff;
+        height: 700px;
+        padding: 3%;
     }
-    .primer_rect{
-        width: 80%;
-    }
-    .contenedor_uno{
-        width: 90%;
-        margin: 14px 14px 0px;
-      }
-    .contenedor_btns button{
-        font-size: 22px;
-        font-weight: 900;
-    }
-    .contenedor_btns{
-        grid-template-columns: 50% 50% ;
-        grid-template-rows: 50px 50px 50px;
-    }
-    .contenedor_dos{
-        width: 90%;
+    .contenedor_uno, .contenedor_dos{
+        width: 98%;
+        height: 45%;
+        margin-bottom: -10px;
         margin: auto;
     }
-    .primer_rect{
-        margin-top: 14px;
-        padding-top:20px;
+   
+    h3{
+        font-size: 20px;
     }
-    .segundo_rect{
-        margin-top: 20px;
-    }
-
-    .borrar{
-        margin-top: -30px;
+    .contenedor_btns{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 55px 55px 55px;
+        margin-bottom: 19px;
     }
     .contenedor_dos{
-        height: 190px;
-        margin-top: 50px;
-        overflow: hidden;
-        
+        margin-top:170px ;
+        height: 30%;
+        padding-top: 22px;
     }
-    .resultado_uno, .resultado_dos{
-        font-size: 30px;
-        margin-top:-3px ;
+    .contenedor_btns button{
+        font-size: 25px;
     }
+    .contenedor_uno_bill_input{
+        height: 50px;
+        margin-top: 20px;
+    }
+    .contenedor_uno_bill_input input{
+        height: 35px;
+        font-size: 33px;
+    }
+    svg{
+        transform: scale(1.7);
+    }
+    .rect{
+        padding-top: 4px;
+        padding-bottom: 0px;
+        margin: 4% 9%;
 
+    }
+    #rect2{
+        padding-top: 0px;
+    }
+    .borrar{
+        margin-top: 10px;
+    }
+    .aviso2{
+        width: 60%;
+        border-color: black;
+        border: 1px;
+        height:30%;
+        box-shadow: 1px 1px 19px 1px black;
+    }
+    .contenedor-aviso2{
+        width: 80%;
+    }
+    .aviso2 h2{
+        text-align: center;
+        padding-bottom: -10px;
+
+    }
 }

@@ -56,9 +56,9 @@ function borrarAviso(){
 }
 botonDiez.addEventListener("click",  extraer);
 function borrar() {
-  valor.value="0";
+  valor.value="";
   resultadoDescuento.textContent = "$0.00";
   resultadoPersonas.textContent = "$0.00";
-  personas.value="0";
+  personas.value="";
 }
 
