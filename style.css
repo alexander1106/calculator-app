@@ -313,4 +313,8 @@ input:focus {
         padding-bottom: -10px;
 
     }
+    .borrar{
+        background-color: #969696;
+        margin-top: 0px
+    }
 }
