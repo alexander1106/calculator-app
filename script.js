@@ -51,14 +51,13 @@ document.querySelector(".ok2").addEventListener("click", function(){
     document.querySelector(".aviso2").style.display = "none"
 });
 
-function borrarAviso(){
-  document.querySelector(".aviso  ").style.display = "none"
-}
+
 botonDiez.addEventListener("click",  extraer);
 function borrar() {
   valor.value="";
   resultadoDescuento.textContent = "$0.00";
   resultadoPersonas.textContent = "$0.00";
   personas.value="";
+  error.style.display = "none"
 }
 

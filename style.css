@@ -245,6 +245,7 @@ input:focus {
 
     }
     .contenedor_logo img{
+        margin-top: -10px;
         width: 25%;
         margin-bottom: 10px;
     }
@@ -272,7 +273,7 @@ input:focus {
     }
     .contenedor_dos{
         margin-top:170px ;
-        height: 30%;
+        height: 33%;
         padding-top: 22px;
     }
     .contenedor_btns button{
@@ -290,22 +291,18 @@ input:focus {
         transform: scale(1.7);
     }
     .rect{
-        padding-top: 4px;
         padding-bottom: 0px;
         margin: 4% 9%;
-
     }
     #rect2{
         padding-top: 0px;
     }
-    .borrar{
-        margin-top: 10px;
-    }
+    
     .aviso2{
         width: 60%;
         border-color: black;
         border: 1px;
-        height:30%;
+        height:20%;
         box-shadow: 1px 1px 19px 1px black;
     }
     .contenedor-aviso2{
