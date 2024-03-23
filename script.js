@@ -1,4 +1,4 @@
-/// Seleccionar elementos del DOM
+//Obtener los elementos
 var botonCinco = document.querySelector(".cinco");
 var botonDiez = document.querySelector(".diez");
 var botonQuince = document.querySelector(".quince");
@@ -7,52 +7,52 @@ var botonCincuenta = document.querySelector(".cincuenta");
 var botonBorrar = document.querySelector(".reset");
 var botonNuevo = document.querySelector(".nuevo");
 var valor = document.querySelector(".valor-introducido");
-var error = document.querySelector(".mensajeError")
-var resultadoDescuento = document.querySelector(".resultado_uno");
-var resultadoPersonas = document.querySelector(".resultado_dos");
-var personas = document.querySelector(".numero_personas")
+var error = document.querySelector(".mensajeError");
+var personas = document.querySelector(".numero_personas");
+
+//Creamos un metodo para los descuentos 
+function agregarEventoDescuento(boton, descuento){
+  boton.addEventListener("click", function(){
+    calcularDescuento(descuento)
+  });
+}
+
+//Aplicamos el metodo en los botones 
+agregarEventoDescuento(botonCinco,0.05)
+agregarEventoDescuento(botonDiez, 0.10)
+agregarEventoDescuento(botonQuince, 0.15)
+agregarEventoDescuento(botonVeinticinco, 0.25)
+agregarEventoDescuento(botonCincuenta, 0.50)
+
 
 botonBorrar.addEventListener("click", borrar);
 
-botonCinco.addEventListener("click", function(){
-  calcularDescuento(0.05)
-});
+
 botonNuevo.addEventListener("keypress", function(event){
   if(event.key==="Enter"){
     calcularDescuento(botonNuevo.value)
   }
 })
-botonDiez.addEventListener("click", function(){
-  calcularDescuento(0.10)
-});
-botonQuince.addEventListener("click", function(){
-  calcularDescuento(0.15);
-});
-botonVeinticinco.addEventListener("click", function(){
-  calcularDescuento(0.25)
-})
-botonCincuenta.addEventListener("click",function(){
-  calcularDescuento(0.50)
-})
+
+//Creamos la funcion para calcular los descuentos
 function calcularDescuento(des){
-
-  if( valor.value<=0 && valor.value<=0){
-    return document.querySelector(".aviso2").style.display="block";
+  if(valor.value<=0 ){
+    return document.querySelector(".contenedor-aviso2").style.display="block";
+  } else if(personas.value <=0){ 
+    return error.style.display = "block"; 
   }
-  if(personas.value <=0){
-    return error.style.display = "block";
-  }
-  var descuento = valor.value-(valor.value*des);
-  reparticion = descuento/personas.value;
-  resultadoDescuento.textContent = "$ " + descuento;
-  resultadoPersonas.textContent =  "$ " + reparticion.toFixed(2);
+  descuentoAplicado = valor.value-(valor.value*des);
+  reparticion = descuentoAplicado/personas.value;
+  document.querySelector(".resultado_uno").textContent = "$ " + descuentoAplicado;
+  document.querySelector(".resultado_dos").textContent =  "$ " + reparticion.toFixed(2);
 }
+
+//Creamos una evento en el cual se limpiue el mensaje error
 document.querySelector(".ok2").addEventListener("click", function(){
-    document.querySelector(".aviso2").style.display = "none"
+    document.querySelector(".contenedor-aviso2").style.display = "none"
 });
 
-
-botonDiez.addEventListener("click",  extraer);
+//Creamos el metodo borrar
 function borrar() {
   valor.value="";
   resultadoDescuento.textContent = "$0.00";
