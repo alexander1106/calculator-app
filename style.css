@@ -25,7 +25,7 @@ body{
 }
 
 .contenedor_logo img{
-    width: 5vw;
+    width: 13%;
 }
 
 .contenedor_general{
@@ -33,6 +33,7 @@ body{
     border-radius: 15px;
     height: 79%;
     display: flex;
+    overflow: hidden;
 }
 
 .contenedor_uno, .contenedor_dos{
